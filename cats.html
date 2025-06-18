@@ -1,238 +1,224 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Cats Gallery | SIUM</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <!-- External CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css"/>
-  <link rel="stylesheet" href="css/font-awesome.min.css"/>
-  <link rel="stylesheet" href="css/elegant-icons.css"/>
-  <link rel="stylesheet" href="css/fresco.css"/>
-  <link rel="stylesheet" href="css/style.css"/>
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <!-- Elegant Icons -->
+  <link rel="stylesheet" href="css/elegant-icons.css" />
+  <!-- Fresco CSS for Lightbox -->
+  <link rel="stylesheet" href="css/fresco.css" />
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Internal CSS with animations -->
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
+    /* Body & Background */
     body {
-      font-family: 'Poppins', sans-serif;
-      background-color: #fafafa;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #fefefe, #f6f9fc);
+      color: #333;
     }
 
-    /* Header Styling */
+    /* Header */
     .header-section {
-  background: linear-gradient(to right, #ffffff, #f2f2f2);
-  padding: 15px 30px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  animation: fadeDown 0.6s ease;
-}
+      background: linear-gradient(to right, #ffffff, #f8fafc);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.07);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      animation: fadeDown 0.6s ease;
+    }
 
-@keyframes fadeDown {
-  from {
-    opacity: 0;
-    transform: translateY(-20px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+    @keyframes fadeDown {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-
+    /* Logo */
     .site-logo img {
       max-height: 50px;
-      transition: transform 0.3s ease-in-out;
+      transition: transform 0.3s ease;
     }
     .site-logo img:hover {
       transform: scale(1.1);
     }
 
-    .main-menu {
-      list-style: none;
+    /* Menu */
+    nav ul.main-menu {
       display: flex;
-      gap: 25px;
+      gap: 24px;
+      list-style: none;
       margin: 0;
+      padding: 0;
     }
-
-    .main-menu li a {
+    nav ul.main-menu li a {
       text-decoration: none;
-      color: #333;
       font-weight: 600;
-      position: relative;
-      transition: color 0.3s;
+      font-size: 16px;
+      color: #333;
+      padding: 6px 0;
+      border-bottom: 3px solid transparent;
+      transition: all 0.3s ease;
     }
-
-    .main-menu li a::after {
-      content: "";
-      position: absolute;
-      bottom: -5px;
-      left: 0;
-      width: 0%;
-      height: 2px;
-      background-color: #f44336;
-      transition: 0.3s;
-    }
-
-    .main-menu li a:hover,
-    .main-menu li a.active {
+    nav ul.main-menu li a:hover,
+    nav ul.main-menu li a.active {
       color: #f44336;
+      border-color: #f44336;
     }
 
-    .main-menu li a:hover::after,
-    .main-menu li a.active::after {
-      width: 100%;
-    }
-
-    /* Gallery */
+    /* Gallery Section */
     .gallery-section {
-      padding: 50px 0;
+      padding: 40px 15px 60px;
+      max-width: 1200px;
+      margin: 0 auto;
     }
 
-    .gallery-item {
-      position: relative;
-      overflow: hidden;
-      border-radius: 10px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .gallery-item:hover {
-      transform: scale(1.03);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
     }
 
     .gallery-item img {
       width: 100%;
-      height: auto;
-      border-radius: 10px;
-      transition: transform 0.5s;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      cursor: pointer;
     }
-
-    .gallery-item:hover img {
+    .gallery-item img:hover {
       transform: scale(1.05);
-    }
-
-    /* Responsive */
-    @media (max-width: 768px) {
-      .main-menu {
-        flex-direction: column;
-        gap: 15px;
-        margin-top: 15px;
-      }
-
-      .header-section {
-        flex-direction: column;
-        align-items: flex-start;
-      }
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     }
 
     /* Footer */
     .footer-section {
-      background: #f1f1f1;
-      padding: 25px;
+      background-color: #f8f9fa;
+      padding: 20px 30px;
       text-align: center;
+      font-size: 14px;
+      color: #666;
       margin-top: 60px;
     }
-
     .footer-social a {
-      margin: 0 10px;
+      margin: 0 12px;
       text-decoration: none;
-      font-weight: bold;
       color: #555;
-      transition: color 0.3s;
+      font-weight: 600;
+      transition: color 0.3s ease;
     }
-
     .footer-social a:hover {
       color: #f44336;
-    }
-
-    .copyright p {
-      margin-top: 10px;
-      font-size: 14px;
-      color: #777;
     }
   </style>
 </head>
 <body>
 
-<!-- Header -->
-<header class="header-section">
-  <a href="index.html" class="site-logo">
-    <img src="img/logo.png" alt="SIUM Logo">
-  </a>
-  <nav>
-    <ul class="main-menu">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="gallery.html" class="active">Gallery</a></li>
-      <li><a href="blog.html">Blog</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="contact.html">Contact</a></li>
-      <li><a href="https://example.com/upload" target="_blank">Upload</a></li>
-    </ul>
-  </nav>
-</header>
+  <!-- Header -->
+  <header class="header-section">
+    <a href="index.html" class="site-logo" title="SIUM Home">
+      <img src="img/logo.png" alt="SIUM Logo" />
+    </a>
+    <nav>
+      <ul class="main-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html" class="active">Gallery</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="https://example.com/upload" target="_blank" rel="noopener noreferrer">Upload Your Photo</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<!-- Gallery -->
-<section class="gallery-section">
-  <div class="container">
-    <div class="row gallery-gird">
+  <!-- Gallery Section -->
+  <section class="gallery-section">
+    <div class="gallery-grid">
+      <!-- Vutu Series -->
+      <a href="img/cats/Vutu1.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Vutu 1">
+        <img src="img/cats/thumb/Vutu1.jpg" alt="Vutu1" loading="lazy" />
+      </a>
+      <a href="img/cats/Vutu2.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Vutu 2">
+        <img src="img/cats/thumb/Vutu2.jpg" alt="Vutu2" loading="lazy" />
+      </a>
+      <a href="img/cats/Vutu3.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Vutu 3">
+        <img src="img/cats/thumb/Vutu3.jpg" alt="Vutu3" loading="lazy" />
+      </a>
+      <a href="img/cats/Vutu4.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Vutu 4">
+        <img src="img/cats/thumb/Vutu4.jpg" alt="Vutu4" loading="lazy" />
+      </a>
+      <a href="img/cats/Vutu5.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Vutu 5">
+        <img src="img/cats/thumb/Vutu5.jpg" alt="Vutu5" loading="lazy" />
+      </a>
+      <a href="img/cats/Vutu6.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Vutu 6">
+        <img src="img/cats/thumb/Vutu6.jpg" alt="Vutu6" loading="lazy" />
+      </a>
+      <a href="img/cats/Vutu7.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Vutu 7">
+        <img src="img/cats/thumb/Vutu7.jpg" alt="Vutu7" loading="lazy" />
+      </a>
 
-      <!-- Vutu -->
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Vutu1.jpg"><img src="img/cats/thumb/Vutu1.jpg" alt=""></a></div>
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Vutu2.jpg"><img src="img/cats/thumb/Vutu2.jpg" alt=""></a></div>
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Vutu3.jpg"><img src="img/cats/thumb/Vutu3.jpg" alt=""></a></div>
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Vutu4.jpg"><img src="img/cats/thumb/Vutu4.jpg" alt=""></a></div>
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Vutu5.jpg"><img src="img/cats/thumb/Vutu5.jpg" alt=""></a></div>
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Vutu6.jpg"><img src="img/cats/thumb/Vutu6.jpg" alt=""></a></div>
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Vutu7.jpg"><img src="img/cats/thumb/Vutu7.jpg" alt=""></a></div>
+      <!-- Simba Series -->
+      <a href="img/cats/Simba1.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Simba 1">
+        <img src="img/cats/thumb/Simba1.jpg" alt="Simba1" loading="lazy" />
+      </a>
+      <a href="img/cats/Simba2.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Simba 2">
+        <img src="img/cats/thumb/Simba2.jpg" alt="Simba2" loading="lazy" />
+      </a>
+      <a href="img/cats/Simba3.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Simba 3">
+        <img src="img/cats/thumb/Simba3.jpg" alt="Simba3" loading="lazy" />
+      </a>
+      <a href="img/cats/Simba4.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Simba 4">
+        <img src="img/cats/thumb/Simba4.jpg" alt="Simba4" loading="lazy" />
+      </a>
+      <a href="img/cats/Simba5.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Simba 5">
+        <img src="img/cats/thumb/Simba5.jpg" alt="Simba5" loading="lazy" />
+      </a>
 
-      <!-- Simba -->
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Simba1.jpg"><img src="img/cats/thumb/Simba1.jpg" alt=""></a></div>
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Simba2.jpg"><img src="img/cats/thumb/Simba2.jpg" alt=""></a></div>
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Simba3.jpg"><img src="img/cats/thumb/Simba3.jpg" alt=""></a></div>
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Simba4.jpg"><img src="img/cats/thumb/Simba4.jpg" alt=""></a></div>
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Simba5.jpg"><img src="img/cats/thumb/Simba5.jpg" alt=""></a></div>
-
-      <!-- Sobbho -->
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Sobbho1.jpg"><img src="img/cats/thumb/Sobbho1.jpg" alt=""></a></div>
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Sobbho2.jpg"><img src="img/cats/thumb/Sobbho2.jpg" alt=""></a></div>
-      <div class="col-lg-4 col-md-6 mb-4"><a class="gallery-item fresco" href="img/cats/Sobbho3.jpg"><img src="img/cats/thumb/Sobbho3.jpg" alt=""></a></div>
-
+      <!-- Sobbho Series -->
+      <a href="img/cats/Sobbho1.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Sobbho 1">
+        <img src="img/cats/thumb/Sobbho1.jpg" alt="Sobbho1" loading="lazy" />
+      </a>
+      <a href="img/cats/Sobbho2.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Sobbho 2">
+        <img src="img/cats/thumb/Sobbho2.jpg" alt="Sobbho2" loading="lazy" />
+      </a>
+      <a href="img/cats/Sobbho3.jpg" class="gallery-item fresco" data-fresco-group="cats" data-fresco-caption="Sobbho 3">
+        <img src="img/cats/thumb/Sobbho3.jpg" alt="Sobbho3" loading="lazy" />
+      </a>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Footer -->
-<footer class="footer-section">
-  <div class="footer-social">
-    <a href="#">Facebook</a>
-    <a href="#">Twitter</a>
-    <a href="#">Instagram</a>
-  </div>
-  <div class="copyright">
-    <p>&copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | made by <strong>SIUM</strong></p>
-  </div>
-</footer>
+  <!-- Footer -->
+  <footer class="footer-section">
+    <div class="footer-social">
+      <a href="#" aria-label="Facebook">Facebook</a>
+      <a href="#" aria-label="Twitter">Twitter</a>
+      <a href="#" aria-label="Instagram">Instagram</a>
+    </div>
+    <div class="copyright">
+      <p>&copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | made by <a href="#">SIUM</a></p>
+    </div>
+  </footer>
 
-<!-- Scripts -->
-<script src="js/vendor/jquery-3.2.1.min.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/fresco.min.js"></script>
-<script src="js/main.js"></script>
-
+  <!-- Scripts -->
+  <script src="js/vendor/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/fresco.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
