@@ -1,181 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>SIUM | Photo Studio HTML Template</title>
-	<meta charset="UTF-8">
-	<meta name="description" content="SIUM Photo Studio HTML Template">
-	<meta name="keywords" content="photo, html">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="SIUM Photo Studio HTML Template">
+  <meta name="keywords" content="photo, html, gallery, portfolio">
+  <meta property="og:title" content="SIUM Photo Studio">
+  <meta property="og:description" content="Creative Lifestyle Photo Studio">
+  <meta property="og:image" content="img/slider-1.jpg">
+  <meta property="og:url" content="https://yourdomain.com">
 
-	<!-- Favicon -->
-	<link rel="icon" href="img/favicon.png" type="image/png">
+  <title>SIUM | Photo Studio HTML Template</title>
 
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="css/bootstrap.min.css"/>
-	<link rel="stylesheet" href="css/font-awesome.min.css"/>
-	<link rel="stylesheet" href="css/elegant-icons.css"/>
-	<link rel="stylesheet" href="css/owl.carousel.min.css"/>
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-	<link rel="stylesheet" href="css/style.css"/>
+  <!-- Favicon -->
+  <link rel="icon" href="img/favicon.ico">
 
-	<!-- Social Media Meta Tags -->
-	<meta property="og:title" content="SIUM | Photo Studio">
-	<meta property="og:description" content="Creative lifestyle photo studio by SIUM.">
-	<meta property="og:image" content="img/slider-1.jpg">
-	<meta property="og:url" content="https://yourdomain.com">
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/elegant-icons.css"/>
+  <link rel="stylesheet" href="css/owl.carousel.min.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
 
-	<!--[if lt IE 9]>
-	<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
-
-	<style>
-		#backToTop {
-			display: none;
-			position: fixed;
-			bottom: 20px;
-			right: 20px;
-			z-index: 99;
-			font-size: 18px;
-			border: none;
-			outline: none;
-			background-color: #000;
-			color: white;
-			cursor: pointer;
-			padding: 10px 15px;
-			border-radius: 5px;
-		}
-		.floating-upload {
-			position: fixed;
-			bottom: 80px;
-			right: 20px;
-			background: #ff5e14;
-			color: white;
-			padding: 12px 18px;
-			border-radius: 30px;
-			box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-			z-index: 99;
-			font-weight: bold;
-			transition: background 0.3s;
-		}
-		.floating-upload:hover {
-			background: #e04800;
-		}
-	</style>
+  <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
 </head>
 <body>
-	<!-- Page Preloader -->
-	<div id="preloder">
-		<div class="loader"></div>
-	</div>
+  <!-- Page Preloader -->
+  <div id="preloder">
+    <div class="loader"></div>
+  </div>
 
-	<!-- Offcanvas Menu -->
-	<div class="offcanvas-menu-wrapper">
-		<div class="menu-header">
-			<a href="./index.html" class="site-logo">
-				<img src="img/logo.png" alt="">
-			</a>
-			<div class="menu-switch" id="menu-canvas-close">
-				<i class="icon_close"></i>
-			</div>
-		</div>
-		<ul class="main-menu">
-			<li><a href="index.html" class="active">Home</a></li>
-			<li><a href="gallery.html">Gallery</a></li>
-			<li><a href="https://is.gd/9XXAdn" target="_blank">Upload Your Photo</a></li>
-			<li><a href="blog.html">Blog</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
-		<div class="menu-footer">
-			<div class="footer-social">
-				<a href="#">Facebook</a>
-				<a href="#">Twitter</a>
-				<a href="#">Instagram</a>
-			</div>
-			<div class="copyright"><p>
-				&copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | made by <a href="https://www.facebook.com/TheOneAndOnlyShadmanShakibSium" target="_blank">SIUM</a>
-			</p></div>
-		</div>
-	</div>
+  <!-- Offcanvas Menu Section -->
+  <div class="offcanvas-menu-wrapper">
+    <div class="menu-header">
+      <a href="index.html" class="site-logo">
+        <img src="img/logo.png" alt="SIUM Logo">
+      </a>
+      <div class="menu-switch" id="menu-canvas-close">
+        <i class="icon_close"></i>
+      </div>
+    </div>
+    <ul class="main-menu">
+      <li><a href="index.html" class="active">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="https://is.gd/9XXAdn" target="_blank">Upload Your Photo</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="menu-footer">
+      <div class="footer-social">
+        <a href="https://www.facebook.com/TheOneAndOnlyShadmanShakibSium" target="_blank">Facebook</a>
+        <a href="https://x.com/ShadmanShakib04?t=u_jXv-oaHbxKA8zNze51RA&s=09" target="_blank">Twitter</a>
+        <a href="https://www.instagram.com/shadman_shakib_sium/" target="_blank">Instagram</a>
+      </div>
+      <div class="copyright">
+        <p>
+          &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | made by
+          <i class="icon-heart color-danger" aria-hidden="true"></i>
+          <a href="https://www.facebook.com/TheOneAndOnlyShadmanShakibSium" target="_blank">SIUM</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Offcanvas Menu Section End -->
 
-	<!-- Header -->
-	<header class="header-section">
-		<a href="./index.html" class="site-logo">
-			<img src="img/logo.png" alt="">
-		</a>
-		<nav class="d-none d-lg-block">
-			<ul class="main-menu">
-				<li><a href="index.html" class="active">Home</a></li>
-				<li><a href="gallery.html">Gallery</a></li>
-				<li><a href="https://is.gd/9XXAdn" target="_blank">Upload</a></li>
-				<li><a href="blog.html">Blog</a></li>
-				<li><a href="about.html">About</a></li>
-				<li><a href="contact.html">Contact</a></li>
-			</ul>
-		</nav>
-		<div class="menu-switch" id="menu-canvas-show">
-			<i class="icon_menu"></i>
-		</div>
-	</header>
+  <!-- Header Section -->
+  <header class="header-section">
+    <a href="index.html" class="site-logo">
+      <img src="img/logo.png" alt="SIUM Logo">
+    </a>
+    <div class="menu-switch" id="menu-canvas-show">
+      <i class="icon_menu"></i>
+    </div>
+  </header>
+  <!-- Header Section End -->
 
-	<!-- Hero -->
-	<section class="hero-section">
-		<div class="hero-slider owl-carousel">
-			<div class="hero-item">
-				<div class="hero-text animate__animated animate__fadeInLeft">
-					<div class="ht-cata">Nature</div>
-					<h2>Photo Studio</h2>
-					<p>SIUM – a creative lifestyle photo studio making emotional photography communicate a story.</p>
-					<a href="#" class="ht-btn">See More <i class="arrow_right"></i></a>
-				</div>
-				<div class="hi-bg set-bg" data-setbg="img/slider-1.jpg"></div>
-			</div>
-			<!-- Add more hero items as needed -->
-		</div>
-	</section>
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="hero-slider owl-carousel">
+      <!-- Hero Item 1 -->
+      <div class="hero-item">
+        <div class="hero-text">
+          <div class="ht-cata">Nature</div>
+          <h2>Photo Studio</h2>
+          <p>SIUM – a creative lifestyle photo studio making emotional photography communicate a story.</p>
+          <a href="https://is.gd/9XXAdn" target="_blank" class="ht-btn">Upload Your Photo <i class="arrow_right"></i></a>
+        </div>
+        <div class="hi-bg set-bg" data-setbg="img/slider-1.jpg"></div>
+      </div>
+      <!-- Hero Item 2 -->
+      <div class="hero-item">
+        <div class="hero-text">
+          <div class="ht-cata">Lifestyle</div>
+          <h2>Creative Moments</h2>
+          <p>Capture your memories with us – crafted to last forever.</p>
+          <a href="gallery.html" class="ht-btn">See Gallery <i class="arrow_right"></i></a>
+        </div>
+        <div class="hi-bg set-bg" data-setbg="img/slider-2.jpg"></div>
+      </div>
+      <!-- Hero Item 3 -->
+      <div class="hero-item">
+        <div class="hero-text">
+          <div class="ht-cata">Portrait</div>
+          <h2>We Frame Smiles</h2>
+          <p>From candid to creative, let SIUM bring your photos to life.</p>
+          <a href="about.html" class="ht-btn">About Us <i class="arrow_right"></i></a>
+        </div>
+        <div class="hi-bg set-bg" data-setbg="img/slider-3.jpg"></div>
+      </div>
+    </div>
+  </section>
+  <!-- Hero Section End -->
 
-	<!-- Floating Upload Button -->
-	<a href="https://is.gd/9XXAdn" target="_blank" class="floating-upload">Upload Photo</a>
+  <!-- Footer Section -->
+  <footer class="footer-section">
+    <div class="footer-social">
+      <a href="https://www.facebook.com/TheOneAndOnlyShadmanShakibSium" target="_blank">Facebook</a>
+      <a href="https://x.com/ShadmanShakib04?t=u_jXv-oaHbxKA8zNze51RA&s=09" target="_blank">Twitter</a>
+      <a href="https://www.instagram.com/shadman_shakib_sium/" target="_blank">Instagram</a>
+    </div>
+    <div class="copyright">
+      <p>&copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | made with <i class="fa fa-heart" aria-hidden="true"></i>
+        <a href="https://www.facebook.com/TheOneAndOnlyShadmanShakibSium" target="_blank">SIUM</a></p>
+    </div>
+  </footer>
+  <!-- Footer Section End -->
 
-	<!-- Back to Top Button -->
-	<button onclick="topFunction()" id="backToTop" title="Go to top">Top</button>
-
-	<!-- Footer -->
-	<footer class="footer-section">
-		<div class="footer-social">
-			<a href="https://www.facebook.com/TheOneAndOnlyShadmanShakibSium">Facebook</a>
-			<a href="https://x.com/ShadmanShakib04">Twitter</a>
-			<a href="https://www.instagram.com/shadman_shakib_sium">Instagram</a>
-		</div>
-		<div class="copyright">
-			<p>&copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | made by <a href="https://www.facebook.com/TheOneAndOnlyShadmanShakibSium" target="_blank">SIUM</a></p>
-		</div>
-	</footer>
-
-	<!-- Scripts -->
-	<script src="js/vendor/jquery-3.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/owl.carousel.min.js"></script>
-	<script src="js/masonry.pkgd.min.js"></script>
-	<script src="js/main.js"></script>
-	<script>
-		// Back to top button
-		const topButton = document.getElementById("backToTop");
-		window.onscroll = function () {
-			scrollFunction();
-		};
-		function scrollFunction() {
-			if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-				topButton.style.display = "block";
-			} else {
-				topButton.style.display = "none";
-			}
-		}
-		function topFunction() {
-			document.body.scrollTop = 0;
-			document.documentElement.scrollTop = 0;
-		}
-	</script>
+  <!-- JavaScript & jQuery -->
+  <script src="js/vendor/jquery-3.2.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/masonry.pkgd.min.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Ensure set-bg class works
+    $(document).ready(function() {
+      $('.set-bg').each(function() {
+        var bg = $(this).data('setbg');
+        $(this).css('background-image', 'url(' + bg + ')');
+      });
+    });
+  </script>
 </body>
 </html>
