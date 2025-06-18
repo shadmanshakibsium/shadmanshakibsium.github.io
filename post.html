@@ -13,12 +13,55 @@
     body {
       background: linear-gradient(to right, #f5f7fa, #f9fbfd);
       font-family: 'Segoe UI', sans-serif;
-      padding: 50px 20px;
+      margin: 0;
+      padding-top: 80px; /* Space for fixed navbar */
+    }
+
+    /* Header/Navbar */
+    .header-section {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: #ffffff;
+      border-bottom: 1px solid #eee;
+      z-index: 999;
+      padding: 10px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+    }
+
+    .site-logo img {
+      max-height: 45px;
+    }
+
+    .main-menu {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin: 0;
+    }
+
+    .main-menu li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+
+    .main-menu li a:hover,
+    .main-menu li a.active {
+      background-color: #f44336;
+      color: #fff;
     }
 
     .container {
       max-width: 1000px;
       margin: auto;
+      padding: 30px 20px;
     }
 
     h2 {
@@ -26,7 +69,6 @@
       font-weight: 700;
       color: #333;
       margin-bottom: 50px;
-      position: relative;
     }
 
     h2::after {
@@ -73,25 +115,41 @@
 </head>
 <body>
 
-  <div class="container">
-    <h2 class="animate__animated animate__fadeInDown">📚 My Posts</h2>
+<!-- ✅ Header/Navbar -->
+<header class="header-section animate__animated animate__fadeInDown">
+  <a href="index.html" class="site-logo">
+    <img src="img/logo.png" alt="SIUM Logo">
+  </a>
+  <nav>
+    <ul class="main-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="post.html" class="active">Post</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <!-- Post 1 -->
-    <div class="post-card animate__animated animate__fadeInUp">
-      <img src="img/posts/vutu.jpg" alt="Vutu" class="post-image">
-      <h4 class="post-title">ভুটুর গল্প</h4>
-      <p class="post-content">ভুটু আমার প্রথম পোষা বিড়াল। সে খুব দুষ্টু ছিল, কিন্তু খুব মিষ্টি। তার সাদা গায়ের উপর বাদামি দাগ ছিল, আর সে সবসময় দৌড়াদৌড়ি করত।</p>
-    </div>
+<!-- ✅ Post Content -->
+<div class="container">
+  <h2 class="animate__animated animate__fadeInDown">📚 My Posts</h2>
 
-    <!-- Post 2 -->
-    <div class="post-card animate__animated animate__fadeInUp animate__delay-1s">
-      <img src="img/posts/simba.jpg" alt="Simba" class="post-image">
-      <h4 class="post-title">সিম্বা: রাজকীয় বিড়াল</h4>
-      <p class="post-content">সিম্বা আমাদের পরিবারের রাজা। সে খুব গম্ভীর এবং অন্য বিড়ালদের নেতা। তার হেলতে চলা হাঁটা সত্যিই গর্বিত মনে হয়!</p>
-    </div>
-
-    <!-- আরও পোস্ট এখানে যোগ করো -->
+  <!-- Post 1 -->
+  <div class="post-card animate__animated animate__fadeInUp">
+    <img src="img/posts/vutu.jpg" alt="Vutu" class="post-image">
+    <h4 class="post-title">ভুটুর গল্প</h4>
+    <p class="post-content">ভুটু আমার প্রথম পোষা বিড়াল। সে খুব দুষ্টু ছিল, কিন্তু খুব মিষ্টি। তার সাদা গায়ের উপর বাদামি দাগ ছিল, আর সে সবসময় দৌড়াদৌড়ি করত।</p>
   </div>
+
+  <!-- Post 2 -->
+  <div class="post-card animate__animated animate__fadeInUp animate__delay-1s">
+    <img src="img/posts/simba.jpg" alt="Simba" class="post-image">
+    <h4 class="post-title">সিম্বা: রাজকীয় বিড়াল</h4>
+    <p class="post-content">সিম্বা আমাদের পরিবারের রাজা। সে খুব গম্ভীর এবং অন্য বিড়ালদের নেতা। তার হেলতে চলা হাঁটা সত্যিই গর্বিত মনে হয়!</p>
+  </div>
+</div>
 
 </body>
 </html>
