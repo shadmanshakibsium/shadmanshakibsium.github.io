@@ -1,77 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Cats Gallery</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/bootstrap.min.css"/>
-    <link rel="stylesheet" href="css/font-awesome.min.css"/>
-    <link rel="stylesheet" href="css/elegant-icons.css"/>
-    <link rel="stylesheet" href="css/fresco.css"/>
-    <link rel="stylesheet" href="css/style.css"/>
+  <meta charset="UTF-8">
+  <title>Cats Gallery | SIUM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/bootstrap.min.css"/>
+  <link rel="stylesheet" href="css/font-awesome.min.css"/>
+  <link rel="stylesheet" href="css/elegant-icons.css"/>
+  <link rel="stylesheet" href="css/fresco.css"/>
+  <link rel="stylesheet" href="css/style.css"/>
 </head>
 <body>
 
-    <!-- Header -->
-    <header class="header-section">
-        <a href="index.html" class="site-logo">
-            <img src="img/logo.png" alt="Logo">
-        </a>
-    </header>
+<!-- Header -->
+<header class="header-section">
+  <a href="index.html" class="site-logo">
+    <img src="img/logo.png" alt="SIUM Logo">
+  </a>
+</header>
 
-    <!-- Gallery Section -->
-    <section class="gallery-section spad">
-        <div class="container">
-            <h2 class="text-center mb-5">🐾 Cats Gallery</h2>
+<!-- Cats Gallery -->
+<section class="gallery-section">
+  <div class="row gallery-gird">
+    <!-- ধরে নিই Vutu1.jpg-Vutu7.jpg -->
+    <div class="col-lg-4 col-md-6">
+      <a class="gallery-item fresco" href="img/cats/Vutu1.jpg" data-fresco-group="cats">
+        <img src="img/cats/Vutu1.jpg" alt="">
+      </a>
+    </div>
+    <div class="col-lg-4 col-md-6">
+      <a class="gallery-item fresco" href="img/cats/Vutu2.jpg" data-fresco-group="cats">
+        <img src="img/cats/Vutu2.jpg" alt="">
+      </a>
+    </div>
+    <!-- বাকিগুলোও একইভাবে যোগ করো -->
+    <!-- Vutu3.jpg থেকে Vutu7.jpg এবং Simba1.jpg থেকে Simba5.jpg ও Sobbho1.jpg - 3.jpg -->
+  </div>
+</section>
 
-            <!-- Vutu Section -->
-            <h3 class="mb-3">Vutu</h3>
-            <div class="row gallery-gird mb-5">
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Vutu1.jpg" data-fresco-group="vutu"><img src="img/cats/Vutu1.jpg" alt=""></a></div>
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Vutu2.jpg" data-fresco-group="vutu"><img src="img/cats/Vutu2.jpg" alt=""></a></div>
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Vutu3.jpg" data-fresco-group="vutu"><img src="img/cats/Vutu3.jpg" alt=""></a></div>
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Vutu4.jpg" data-fresco-group="vutu"><img src="img/cats/Vutu4.jpg" alt=""></a></div>
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Vutu5.jpg" data-fresco-group="vutu"><img src="img/cats/Vutu5.jpg" alt=""></a></div>
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Vutu6.jpg" data-fresco-group="vutu"><img src="img/cats/Vutu6.jpg" alt=""></a></div>
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Vutu7.jpg" data-fresco-group="vutu"><img src="img/cats/Vutu7.jpg" alt=""></a></div>
-            </div>
+<!-- Footer -->
+<footer class="footer-section">
+  <div class="footer-social">
+    <a href="#">Facebook</a>
+    <a href="#">Twitter</a>
+    <a href="#">Instagram</a>
+  </div>
+  <div class="copyright">
+    <p>&copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | made by <a href="#">SIUM</a></p>
+  </div>
+</footer>
 
-            <!-- Simba Section -->
-            <h3 class="mb-3">Simba</h3>
-            <div class="row gallery-gird mb-5">
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Simba1.jpg" data-fresco-group="simba"><img src="img/cats/Simba1.jpg" alt=""></a></div>
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Simba2.jpg" data-fresco-group="simba"><img src="img/cats/Simba2.jpg" alt=""></a></div>
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Simba3.jpg" data-fresco-group="simba"><img src="img/cats/Simba3.jpg" alt=""></a></div>
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Simba4.jpg" data-fresco-group="simba"><img src="img/cats/Simba4.jpg" alt=""></a></div>
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Simba5.jpg" data-fresco-group="simba"><img src="img/cats/Simba5.jpg" alt=""></a></div>
-            </div>
+<!-- Scripts -->
+<script src="js/vendor/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/fresco.min.js"></script>
+<script src="js/main.js"></script>
 
-            <!-- Sobbho Section -->
-            <h3 class="mb-3">Sobbho</h3>
-            <div class="row gallery-gird">
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Sobbho1.jpg" data-fresco-group="sobbho"><img src="img/cats/Sobbho1.jpg" alt=""></a></div>
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Sobbho2.jpg" data-fresco-group="sobbho"><img src="img/cats/Sobbho2.jpg" alt=""></a></div>
-                <div class="col-lg-3 col-md-4 col-sm-6"><a class="gallery-item fresco" href="img/cats/Sobbho3.jpg" data-fresco-group="sobbho"><img src="img/cats/Sobbho3.jpg" alt=""></a></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer-section text-center mt-5">
-        <div class="footer-social">
-            <a href="#">Facebook</a>
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-        </div>
-        <p>© <script>document.write(new Date().getFullYear())</script> All rights reserved | Made by SIUM</p>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="js/vendor/jquery-3.2.1.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/masonry.pkgd.min.js"></script>
-    <script src="js/fresco.min.js"></script>
-    <script src="js/main.js"></script>
 </body>
 </html>
