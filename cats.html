@@ -9,45 +9,51 @@
   <link rel="stylesheet" href="css/elegant-icons.css"/>
   <link rel="stylesheet" href="css/fresco.css"/>
   <link rel="stylesheet" href="css/style.css"/>
+
+  <style>
+    /* Simple inline menu styling for desktop */
+    .main-menu {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      margin-top: 15px;
+    }
+    .main-menu li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    .main-menu li a.active {
+      color: #f44336;
+    }
+    .header-section {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      border-bottom: 1px solid #eee;
+    }
+  </style>
 </head>
 <body>
 
-  <!-- Offcanvas Menu Section -->
-	<div class="offcanvas-menu-wrapper">
-		<div class="menu-header">
-			<a href="./index.html" class="site-logo">
-				<img src="img/logo.png" alt="">
-			</a>
-			<div class="menu-switch" id="menu-canvas-close">
-				<i class="icon_close"></i>
-			</div>
-		</div>
-		<ul class="main-menu">
-			<li><a href="index.html" class="active">Home</a></li>
-			<li><a href="gallery.html">Gallery</a></li>
-			<li><a href="blog.html">Blog</a></li>
-			<li><a href="about.html">About</a></li>
-			<li><a href="contact.html">Contact</a></li>
-		</ul>
-		<div class="menu-footer">
-			<div class="footer-social">
-				<a href="#">Facebook</a>
-				<a href="#">Twitter</a>
-				<a href="#">Instagram</a>
-			</div>
-			<div class="copyright"><p>
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | made by <i class="icon-heart color-danger" aria-hidden="true"></i> <a href="https://www.facebook.com/TheOneAndOnlyShadmanShakibSium" target="_blank">SIUM</a>
-  </p></div>
-		</div>
-	</div>
-	<!-- Offcanvas Menu Section end -->
-
-<!-- Header -->
+<!-- Header with Visible Menu -->
 <header class="header-section">
   <a href="index.html" class="site-logo">
-    <img src="img/logo.png" alt="SIUM Logo">
+    <img src="img/logo.png" alt="SIUM Logo" style="max-height: 50px;">
   </a>
+  <nav>
+    <ul class="main-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="https://example.com/upload" target="_blank">Upload Your Photo</a></li>
+    </ul>
+  </nav>
 </header>
+
 <!-- Cats Gallery -->
 <section class="gallery-section">
   <div class="container">
