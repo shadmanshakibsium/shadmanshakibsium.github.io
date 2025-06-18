@@ -4,34 +4,103 @@
   <meta charset="UTF-8">
   <title>Cats Gallery | SIUM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- External CSS -->
   <link rel="stylesheet" href="css/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/font-awesome.min.css"/>
   <link rel="stylesheet" href="css/elegant-icons.css"/>
   <link rel="stylesheet" href="css/fresco.css"/>
   <link rel="stylesheet" href="css/style.css"/>
 
+  <!-- Internal CSS for Menu -->
   <style>
-    /* Simple inline menu styling for desktop */
-    .main-menu {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-      margin-top: 15px;
+    /* Reset default styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
-    .main-menu li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
+
+    body {
+      font-family: Arial, sans-serif;
     }
-    .main-menu li a.active {
-      color: #f44336;
-    }
+
+    /* Header styling */
     .header-section {
       display: flex;
       justify-content: space-between;
       align-items: center;
       padding: 15px 30px;
       border-bottom: 1px solid #eee;
+      background: #fff;
+      flex-wrap: wrap;
+    }
+
+    .site-logo img {
+      max-height: 50px;
+    }
+
+    /* Main menu styling */
+    .main-menu {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      padding: 0;
+      margin: 10px 0;
+    }
+
+    .main-menu li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .main-menu li a:hover,
+    .main-menu li a.active {
+      color: #f44336;
+    }
+
+    /* Responsive: Stack menu on small screens */
+    @media (max-width: 768px) {
+      .main-menu {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    /* Gallery grid spacing */
+    .gallery-section {
+      padding: 40px 0;
+    }
+
+    .gallery-gird {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .gallery-item img {
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    /* Footer styling */
+    .footer-section {
+      text-align: center;
+      padding: 20px;
+      background: #f7f7f7;
+      margin-top: 40px;
+    }
+
+    .footer-social a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #333;
+    }
+
+    .footer-social a:hover {
+      color: #f44336;
     }
   </style>
 </head>
@@ -40,7 +109,7 @@
 <!-- Header with Visible Menu -->
 <header class="header-section">
   <a href="index.html" class="site-logo">
-    <img src="img/logo.png" alt="SIUM Logo" style="max-height: 50px;">
+    <img src="img/logo.png" alt="SIUM Logo">
   </a>
   <nav>
     <ul class="main-menu">
