@@ -2,11 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Posts | SIUM</title>
+  <title>Post | SIUM</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <!-- Bootstrap & Animate.css -->
+  <!-- CSS Files -->
   <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
   <style>
@@ -14,22 +15,21 @@
       background: linear-gradient(to right, #f5f7fa, #f9fbfd);
       font-family: 'Segoe UI', sans-serif;
       margin: 0;
-      padding-top: 80px; /* Space for fixed navbar */
+      padding-top: 80px;
     }
 
-    /* Header/Navbar */
+    /* Navbar */
     .header-section {
       position: fixed;
       top: 0;
       width: 100%;
-      background: #ffffff;
+      background: #fff;
       border-bottom: 1px solid #eee;
-      z-index: 999;
+      z-index: 1000;
       padding: 10px 30px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.03);
     }
 
     .site-logo img {
@@ -37,9 +37,9 @@
     }
 
     .main-menu {
+      list-style: none;
       display: flex;
       gap: 20px;
-      list-style: none;
       margin: 0;
     }
 
@@ -58,8 +58,39 @@
       color: #fff;
     }
 
+    /* Hamburger */
+    .nav-switch {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .main-menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 30px;
+        background: #fff;
+        padding: 10px 20px;
+        border-radius: 10px;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .main-menu.active {
+        display: flex;
+      }
+
+      .nav-switch {
+        display: block;
+        color: #333;
+      }
+    }
+
+    /* Content */
     .container {
-      max-width: 1000px;
+      max-width: 900px;
       margin: auto;
       padding: 30px 20px;
     }
@@ -116,12 +147,12 @@
 <body>
 
 <!-- ✅ Header/Navbar -->
-<header class="header-section animate__animated animate__fadeInDown">
+<header class="header-section">
   <a href="index.html" class="site-logo">
     <img src="img/logo.png" alt="SIUM Logo">
   </a>
   <nav>
-    <ul class="main-menu">
+    <ul class="main-menu" id="menu">
       <li><a href="index.html">Home</a></li>
       <li><a href="gallery.html">Gallery</a></li>
       <li><a href="blog.html">Blog</a></li>
@@ -129,6 +160,7 @@
       <li><a href="contact.html">Contact</a></li>
       <li><a href="post.html" class="active">Post</a></li>
     </ul>
+    <div class="nav-switch" onclick="toggleMenu()"><i class="fa fa-bars"></i></div>
   </nav>
 </header>
 
@@ -150,6 +182,17 @@
     <p class="post-content">সিম্বা আমাদের পরিবারের রাজা। সে খুব গম্ভীর এবং অন্য বিড়ালদের নেতা। তার হেলতে চলা হাঁটা সত্যিই গর্বিত মনে হয়!</p>
   </div>
 </div>
+
+<!-- ✅ Script -->
+<script>
+  function toggleMenu() {
+    document.getElementById('menu').classList.toggle('active');
+  }
+</script>
+
+<!-- JS Files -->
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
 
 </body>
 </html>
